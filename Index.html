@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="Index.css">
-    <title>MINEX</title>
+    <title>MInex_Store</title>
 </head>
 <body>
-    <div id="nav-bar">
-        <a href="#"><img src="logo.png" alt=""></a>
-    <div class="search-bx">
-        <input type="search" name="" id="" placeholder="search product...">
-    </div>
-    <ul id="list-items">
-        <li><a href="">Products</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="">Login</a></li>
-    </ul>
-</div>
+    <nav>
+        <ul class="side-bar">
+            <li onclick=hidesidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M256-213.847 213.847-256l224-224-224-224L256-746.153l224 224 224-224L746.153-704l-224 224 224 224L704-213.847l-224-224-224 224Z"/></svg></a></li>
+           
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+        <ul>
+            <li class="res-logo"><img src="logo-regular.png" alt=""></li>
+            <li class="hideOnMobile"><a href="#">Products</a></li>
+            <li class="hideOnMobile"><a href="#">About</a></li>
+            <li class="hideOnMobile"><a href="#">Contact</a></li>
+            <li class="hideOnMobile"><a href="#">Account</a></li>
+            <li onclick=showsidebar() class="ham"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M140.001-254.616v-59.999h679.998v59.999H140.001Zm0-195.385v-59.998h679.998v59.998H140.001Zm0-195.384v-59.999h679.998v59.999H140.001Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <script src="Index.js"></script>
 </body>
 </html>
