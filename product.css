@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  nav{
+    background: #fff;
+    box-shadow: 3px 3px 5px rgba(0, 0,0, 0.1);
+    height: 5rem;
+    position: fixed;
+    top:0;
+    width: 100%;
+  }
+  nav > ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #fff;
+    height: 5rem;
+  }
+  nav > ul > li{
+    height: 3rem;
+  }
+  nav > ul > li >a{
+    height: 100%;
+    padding: 0 2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #000;
+  }
+  nav > ul > li >a:hover{
+    color: #87cefa;
+  }
+  nav > ul > li:first-child{
+    margin-right: auto
+  }
+  nav > ul > li:first-child:hover{
+    background: #fff;
+  
+  }
+  .side-bar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 15rem;
+    z-index: 999;
+    background: #fff;
+    backdrop-filter: blur(2rem);
+    box-shadow: -10px 0 10px rgba(0, 0,0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .side-bar > li{
+    width: 100%;
+  }
+  .side-bar > a{
+    width: 100%;
+  }
+  .ham{
+    visibility: hidden;
+  }
+  nav > ul > li >img{
+    height: 3.5rem;
+  }
+  nav > ul > li >img:hover{
+    background: none;
+    border: none;
+  }
+  nav > ul > li > .res-logo{
+    visibility: hidden;
+   }
+   nav > ul > li > ul.nav-dropdown{
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+   }
+   nav > ul > li > ul.nav-dropdown > li{
+    display: block;
+   }
+   nav > ul > li:hover > ul.nav-dropdown{
+    display: block;
+   }
+  @media screen and (max-width:800px) {
+    .hideOnMobile{
+      display: none;
+    }
+    .ham{
+      display: auto;
+      visibility: visible;
+    }
+    nav > ul > li > a:hover{
+     background: #f0f0f0;
+     border: none;
+    }
+    nav > ul > li:not(:first-child){
+      margin-top: 1.5rem;
+    }
+   
+    }
+  @media screen and (max-width:600px) {
+    .hideOnMobile{
+      display: none;
+    }
+    nav > ul > li > a:hover{ background: #f0f0f0;
+    }
+  }
+  @media screen and (max-width:400px) {
+    .side-bar{
+      width: 100%;
+    }
+    nav > ul > li > a:hover{
+      background: #f0f0f0;
+    }
+    nav > ul > li:first-child{
+      display: none;
+    }
+  }
